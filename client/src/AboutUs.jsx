@@ -21,10 +21,10 @@ const Wrapper = styled.div`
   z-index: 3;
   margin-top: 76vh;
   @media${({ theme }) => theme.device.mobile} {
-    margin-top: 28vh;
+    margin-top: 41vh;
   }
   @media${({ theme }) => theme.device.tablet} {
-    margin-top: 58vh;
+    margin-top: 78vh;
   }
   @media${({ theme }) => theme.device.laptop} {
     margin-top: 82vh;

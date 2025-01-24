@@ -48,7 +48,7 @@ html {
 
   /* rest of the vars */
   --backgroundColor: #fff8e6;
-    --headingColor: var(--grey-900);
+    --headingColor: var(--highlights2);
     --highlights1:#f7cb86;
     --highlights2:#ABC4D6;
     --textColor: var(--grey-900);
@@ -80,7 +80,6 @@ body {
 }
 p {
   margin-bottom: 1rem;
-  max-width: 50%;
   font-size:1.25rem;
   letter-spacing:var(--letterSpacing);
   font-weight:100;
@@ -96,6 +95,7 @@ h5 {
     font-weight: 400;
     line-height: 1.3;
     text-transform: capitalize;
+    color: var(--headingColor);
 }
 
 h1 {
@@ -146,7 +146,7 @@ ul {
 .btn {
   cursor: pointer;
   color: var(--white);
-  background: var(--primary-500);
+  background: var(--highlights1);
   border: transparent;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
@@ -157,7 +157,7 @@ ul {
   display: inline-block;
 }
 .btn:hover {
-  background: var(--primary-700);
+  background: var(--highlights2);
   box-shadow: var(--shadow-3);
 }
 .btn-hipster {

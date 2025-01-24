@@ -41,9 +41,9 @@ const Shop = () => {
   ];
   const Wine = wines.map((wine) => (
     <li key={wine.id}>
-      <img src={wine.src} alt={wine.alt} />
+      <img src={wine.src} alt={wine.alt}  className='img'/>
       <p>{wine.name}</p>
-      <span>${wine.price}</span>
+      <p>${wine.price}</p>
       <span>{wine.region}</span>
     </li>
   ));
@@ -62,21 +62,34 @@ const Wrapper = styled.div`
 `;
 const Content = styled.ul`
   display: flex;
-  border: 4px solid yellow;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding:0 1.5rem 0.8rem 1.5rem;
+  @media${({ theme }) => theme.device.mobile} {
+   flex-direction:column;
+   justify-content:center;
+   align-items:center;
+   padding:0;
+  }
   li {
-    border: 1px solid #000;
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    max-width: 12rem;
+    width: 8rem;
   }
   img {
-    max-width: 50%;
     height: 100%;
-    object-fit: center;
+  }
+  p{
+    max-width:100%;
+    text-align:center;
+    font-size:0.7rem;
+    margin-bottom:0;
+  }
+  span{
+    font-size:0.6rem;
+    font-weight:700;
   }
 `;
 export default Shop;
