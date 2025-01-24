@@ -50,7 +50,7 @@ html {
   --backgroundColor: #fff8e6;
     --headingColor: var(--grey-900);
     --highlights1:#f7cb86;
-    --highlights2:#B5A744;
+    --highlights2:#ABC4D6;
     --textColor: var(--grey-900);
     --borderRadius: 0.25rem;
     --letterSpacing: 1px;
@@ -76,7 +76,7 @@ body {
   font-weight: 200;
   line-height: 1.5rem;
   color: var(--textColor);
-  overflow-x:hidden
+  overflow-x:hidden;
 }
 p {
   margin-bottom: 1rem;
