@@ -42,6 +42,8 @@ const Container = styled.div`
   }
   h2 {
     text-align: center;
+    font-size:1.5rem;
+    margin-bottom:0;
   }
   p {
     text-align: center;

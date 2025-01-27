@@ -59,6 +59,12 @@ const Wrapper = styled.div`
   h2 {
     text-align: center;
   }
+  @media ${({theme})=>theme.device.mobile}{
+h2{
+  font-size:1.5rem;
+  margin-bottom:0;
+};
+  }
 `;
 const Content = styled.ul`
   display: flex;

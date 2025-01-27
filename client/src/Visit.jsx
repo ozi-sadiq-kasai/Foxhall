@@ -18,7 +18,7 @@ const Visit = () => {
           </p>
         </Section>
         <Footer>
-          <h4>Please sign up below to be kept up to date on our plans:</h4>
+          <h4>Please sign up below to be kept up to date on our plans</h4>
           <form action='#' className='form'>
             <input type='text' placeholder='Email' />
             <motion.button
@@ -41,6 +41,7 @@ const Wrapper = styled.div`
     @media ${({ theme }) => theme.device.mobile} {
       font-size: 1.5rem;
       padding-top: 1rem;
+      margin-bottom:0;
     }
     @media ${({ theme }) => theme.device.laptop} {
       font-size: 2.5rem;
@@ -61,6 +62,24 @@ const Section = styled.div`
     font-size: 1.1rem;
   }
 
+  @media ${({ theme }) => theme.device.mobile} {
+    postion: absolute;
+    bottom:6rem;
+    width: 100%;
+    /* right:-29rem; */
+    p {
+    font-size: 0.8rem;
+    margin-bottom:0;
+    line-height:1.2;
+    text-align:center;
+  }
+  }
+  @media ${({ theme }) => theme.device.tablet} {
+    postion: absolute;
+    bottom:20rem;
+    width: 50%;
+    right:-24rem;
+  }
   @media ${({ theme }) => theme.device.laptop} {
     postion: absolute;
     bottom:27rem;
@@ -71,7 +90,7 @@ const Section = styled.div`
     postion: absolute;
     bottom:30rem;
     width: 50%;
-    right:-45rem;
+    right:-43rem;
     p{
       font-size:1.3rem;
       line-height:1.5;
@@ -102,9 +121,43 @@ const Footer = styled.footer`
     }
   }
 
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 100%;
+    margin: -4rem auto;
+    padding-bottom:0.9rem;
+    h4 {
+    font-size:0.9rem;
+  }
+    form {
+      width: 85%;
+      margin: 0.7rem auto;
+      padding: 0.4rem 1rem;
+      button {
+        width: 30%;
+        padding: 0.1rem 1rem;
+      }
+    }
+  }
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 100%;
+    margin: -12rem auto;
+    h4 {
+    font-size:1.2rem;
+  }
+    form {
+      width: 70%;
+      margin: 1rem auto;
+      padding: 0.4rem 1rem;
+      button {
+        width: 30%;
+        padding: 0.3rem 1rem;
+      }
+    }
+  }
   @media ${({ theme }) => theme.device.laptop} {
     width: 100%;
     margin: -10rem auto;
+    padding-bottom:1rem;
     form {
       width: 70%;
       margin: 0 auto;
@@ -116,6 +169,7 @@ const Footer = styled.footer`
   @media ${({ theme }) => theme.device.desktop} {
     width: 100%;
     margin: -11rem auto;
+    padding:0.8rem 0;
     form {
       width: 50%;
       margin: 0 auto;
