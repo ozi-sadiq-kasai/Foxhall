@@ -4,7 +4,7 @@ import Shop from './Shop';
 import Visit from './Visit';
 const App = () => {
   return (
-    <main>
+    <main >
       <Navbar />
       <AboutUs />
       <Shop />
