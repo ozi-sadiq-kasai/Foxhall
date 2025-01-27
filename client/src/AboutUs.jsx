@@ -50,7 +50,8 @@ const Container = styled.div`
     margin: 0 auto;
     max-width: 100%;
     @media${({ theme }) => theme.device.mobile} {
-      max-width: 90%;
+      max-width: 95%;
+      font-size:1rem;
     }
   }
 `

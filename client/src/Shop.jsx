@@ -71,7 +71,7 @@ const Content = styled.ul`
   justify-content: space-evenly;
   gap: 1rem;
   padding:0 1.5rem 0.8rem 1.5rem;
-  @media${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.device.mobile} {
    flex-direction:column;
    justify-content:center;
    align-items:center;
