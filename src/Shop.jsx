@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import Wine1 from './assets/Wine1.png';
-import Wine2 from './assets/Wine2.png';
-import Wine3 from './assets/Wine3.png';
-import Wine4 from './assets/Wine4.png';
+import Wine1 from './assets/winery.png';
+import Wine2 from './assets/maseto.png';
+import Wine3 from './assets/fratelli.png';
+import Wine4 from './assets/Chanti.png';
 
 const Shop = () => {
   const wines = [
@@ -41,10 +41,10 @@ const Shop = () => {
   ];
   const Wine = wines.map((wine) => (
     <li key={wine.id}>
-      <img src={wine.src} alt={wine.alt}  className='img'/>
-      <p>{wine.name}</p>
-      <p>${wine.price}</p>
-      <span>{wine.region}</span>
+      <img src={wine.src} alt={wine.alt} className='img' />
+        <p>{wine.name}</p>
+        <p>${wine.price}</p>
+        <span>{wine.region}</span>
     </li>
   ));
   return (
@@ -59,27 +59,34 @@ const Wrapper = styled.div`
   h2 {
     text-align: center;
   }
-  @media ${({theme})=>theme.device.mobile}{
-h2{
-  font-size:1.5rem;
-  margin-bottom:0;
-};
+
+  @media ${({ theme }) => theme.device.mobile} {
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+  @media ${({ theme }) => theme.device.tablet} {
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
   }
 `;
 const Content = styled.ul`
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  padding:0 1.5rem 0.8rem 1.5rem;
+  padding: 0 1.5rem 0.8rem 1.5rem;
   @media ${({ theme }) => theme.device.mobile} {
-   flex-direction:column;
-   justify-content:center;
-   align-items:center;
-   padding:0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
   li {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 8rem;
@@ -87,15 +94,24 @@ const Content = styled.ul`
   img {
     height: 100%;
   }
-  p{
-    max-width:100%;
-    text-align:center;
-    font-size:0.7rem;
-    margin-bottom:0;
+  p {
+    max-width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    margin-bottom: 0;
   }
-  span{
-    font-size:0.6rem;
-    font-weight:700;
+  span {
+    font-size: 0.6rem;
+    font-weight: 700;
+  }
+  @media ${({ theme }) => theme.device.tablet} {
+    padding: 0;
+    p {
+      /* line-height:0; */
+    }
+    li > p,span {
+      line-height:0.9rem
+    }
   }
 `;
 export default Shop;

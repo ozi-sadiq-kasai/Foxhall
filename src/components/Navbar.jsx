@@ -21,6 +21,7 @@ const Navbar = () => {
 
 const Wrapper = styled.nav`
   position: relative;
+  
 `;
 const Container = styled.div`
   display: flex;
@@ -33,28 +34,32 @@ const Container = styled.div`
   h1 {
     margin-bottom: 0;
     color: var(--highlights1);
+    font-size: 3rem;
     @media ${({ theme }) => theme.device.mobile} {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
+    }
+    @media ${({ theme }) => theme.device.tablet} {
+      font-size: 2.5rem;
     }
   }
   ul {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap:1rem;
+    justify-content: space-evenly;
+    width: 65%;
+    gap:0.8rem;
   }
   li {
     cursor: pointer;
     font-size: 1.7rem;
     font-weight:800;
-    color: var(--highlights2);
+    color: #F7F0A2;
     @media ${({ theme }) => theme.device.mobile} {
       font-size: 0.9rem;
     }
   }
   li:hover {
-    color: var(--highlights1);
+    color: var(--highlights2);
     transition: var(--transition);
   }
 `;
@@ -62,7 +67,7 @@ const Section = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100vh; /* Takes the full viewport height */
+
   z-index: 1; 
   overflow: hidden;
   img {

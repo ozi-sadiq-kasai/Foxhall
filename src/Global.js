@@ -48,9 +48,9 @@ html {
 
   /* rest of the vars */
   --backgroundColor: #fff8e6;
-    --headingColor: var(--highlights2);
-    --highlights1:#f7cb86;
-    --highlights2:#ABC4D6;
+    --headingColor: var(--highlights1);
+    --highlights1: #808000;
+    --highlights2:#D2B48C   ;
     --textColor: var(--grey-900);
     --borderRadius: 0.25rem;
     --letterSpacing: 1px;
