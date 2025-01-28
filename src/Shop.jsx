@@ -78,12 +78,7 @@ const Content = styled.ul`
   justify-content: space-evenly;
   gap: 1rem;
   padding: 0 1.5rem 0.8rem 1.5rem;
-  @media ${({ theme }) => theme.device.mobile} {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
+ 
   li {
     display: flex;
     flex-direction: column;
@@ -104,11 +99,20 @@ const Content = styled.ul`
     font-size: 0.6rem;
     font-weight: 700;
   }
+  @media ${({ theme }) => theme.device.mobile} {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li > p,span {
+      line-height:0.9rem
+    }
+    li{
+      width:12rem;
+    }
+  }
   @media ${({ theme }) => theme.device.tablet} {
     padding: 0;
-    p {
-      /* line-height:0; */
-    }
     li > p,span {
       line-height:0.9rem
     }
