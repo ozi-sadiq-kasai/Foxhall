@@ -17,6 +17,10 @@ const AboutUs = () => {
 };
 
 const Wrapper = styled.div`
+  @media ${({ theme }) => theme.device.small} {
+    z-index: 3;
+    margin-top: 25vh;
+  }
   @media ${({ theme }) => theme.device.mobile} {
     z-index: 3;
     margin-top: 38vh;
@@ -46,6 +50,14 @@ const Container = styled.div`
     max-width: 100%;
   }
 
+  @media ${({ theme }) => theme.device.small} {
+    padding: 0;
+    padding-top: 0.4rem;
+    p {
+      max-width: 95%;
+      font-size: 1rem;
+    }
+  }
   @media ${({ theme }) => theme.device.mobile} {
     padding: 0;
     padding-top: 0.8rem;

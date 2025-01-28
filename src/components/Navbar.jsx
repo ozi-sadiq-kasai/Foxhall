@@ -35,6 +35,9 @@ const Container = styled.div`
     margin-bottom: 0;
     color: var(--highlights1);
     font-size: 3rem;
+    @media ${({ theme }) => theme.device.small} {
+      font-size: 1.4rem;
+    }
     @media ${({ theme }) => theme.device.mobile} {
       font-size: 1.7rem;
     }
@@ -54,6 +57,9 @@ const Container = styled.div`
     font-size: 1.7rem;
     font-weight:800;
     color: #F7F0A2;
+    @media ${({ theme }) => theme.device.small} {
+      font-size: 0.9rem;
+    }
     @media ${({ theme }) => theme.device.mobile} {
       font-size: 0.9rem;
     }

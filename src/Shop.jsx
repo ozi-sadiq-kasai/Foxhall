@@ -60,6 +60,12 @@ const Wrapper = styled.div`
     text-align: center;
   }
 
+  @media ${({ theme }) => theme.device.small} {
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
   @media ${({ theme }) => theme.device.mobile} {
     h2 {
       font-size: 1.5rem;
@@ -98,6 +104,18 @@ const Content = styled.ul`
   span {
     font-size: 0.6rem;
     font-weight: 700;
+  }
+  @media ${({ theme }) => theme.device.small} {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li > p,span {
+      line-height:0.9rem
+    }
+    li{
+      width:11rem;
+    }
   }
   @media ${({ theme }) => theme.device.mobile} {
     padding: 0;

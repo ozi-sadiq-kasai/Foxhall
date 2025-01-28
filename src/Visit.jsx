@@ -38,6 +38,11 @@ const Visit = () => {
 const Wrapper = styled.div`
   h2 {
     text-align: center;
+    @media ${({ theme }) => theme.device.small} {
+      font-size: 1.5rem;
+      padding-top: 1rem;
+      margin-bottom:0;
+    }
     @media ${({ theme }) => theme.device.mobile} {
       font-size: 1.5rem;
       padding-top: 1rem;
@@ -67,11 +72,22 @@ const Section = styled.div`
     font-size: 1.1rem;
   }
 
+  @media ${({ theme }) => theme.device.small} {
+    postion: absolute;
+    bottom:6rem;
+    width: 100%;
+    p {
+    font-size: 0.7rem;
+    padding:0 0.5rem;
+    margin-bottom:0;
+    line-height:1.2;
+    text-align:center;
+  }
+  }
   @media ${({ theme }) => theme.device.mobile} {
     postion: absolute;
     bottom:6rem;
     width: 100%;
-    /* right:-29rem; */
     p {
     font-size: 0.8rem;
     margin-bottom:0;
@@ -129,6 +145,24 @@ const Footer = styled.footer`
     }
   }
 
+  @media ${({ theme }) => theme.device.small} {
+    width: 100%;
+    margin: -4rem auto;
+    padding-bottom:0.9rem;
+    h4 {
+    font-size:0.9rem;
+    padding:0 0.5rem;
+  }
+    form {
+      width: 85%;
+      margin: 0.7rem auto;
+      padding: 0.2rem 0.8rem;
+      button {
+        width: 40%;
+        padding: 0.1rem 0.5rem;
+      }
+    }
+  }
   @media ${({ theme }) => theme.device.mobile} {
     width: 100%;
     margin: -4rem auto;
