@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Wine1 from './assets/winery.png';
 import Wine2 from './assets/maseto.png';
 import Wine3 from './assets/fratelli.png';
-import Wine4 from './assets/Chanti.png';
+import Wine4 from './assets/chanti.png';
 
 const Shop = () => {
   const wines = [
