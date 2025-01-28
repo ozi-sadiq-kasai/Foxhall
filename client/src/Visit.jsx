@@ -43,6 +43,11 @@ const Wrapper = styled.div`
       padding-top: 1rem;
       margin-bottom:0;
     }
+    @media ${({ theme }) => theme.device.tablet} {
+      font-size: 2rem;
+      margin-bottom:0;
+      margin-top:0.8rem;
+    }
     @media ${({ theme }) => theme.device.laptop} {
       font-size: 2.5rem;
     }
@@ -58,7 +63,7 @@ const Content = styled.div`
 const Section = styled.div`
   position: relative;
   p {
-    color: var(--highlights2);
+    color: var(--grey-400);
     font-size: 1.1rem;
   }
 
@@ -78,7 +83,10 @@ const Section = styled.div`
     postion: absolute;
     bottom:20rem;
     width: 50%;
-    right:-24rem;
+    right:-22rem;
+    p{
+    margin-bottom:0;
+    }
   }
   @media ${({ theme }) => theme.device.laptop} {
     postion: absolute;
@@ -139,10 +147,11 @@ const Footer = styled.footer`
     }
   }
   @media ${({ theme }) => theme.device.tablet} {
-    width: 100%;
+    /* width: 100%; */
     margin: -12rem auto;
     h4 {
     font-size:1.2rem;
+    padding-top:0.8rem;
   }
     form {
       width: 70%;
