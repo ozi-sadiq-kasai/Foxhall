@@ -17,7 +17,7 @@ const AboutUs = () => {
 };
 
 const Wrapper = styled.div`
-  @media ${({ theme }) => theme.device.small} {
+  /* @media ${({ theme }) => theme.device.small} {
     z-index: 3;
     margin-top: 38vh;
   }
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   }
   @media ${({ theme }) => theme.device.desktop} {
     margin-top: 85vh;
-  }
+  } */
 `;
 const Container = styled.div`
   margin: 0 auto;

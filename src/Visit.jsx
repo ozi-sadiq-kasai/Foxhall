@@ -36,22 +36,23 @@ const Visit = () => {
 };
 
 const Wrapper = styled.div`
+  position: relative;
   h2 {
     text-align: center;
     @media ${({ theme }) => theme.device.small} {
       font-size: 1.5rem;
       padding-top: 1rem;
-      margin-bottom:0;
+      margin-bottom: 0;
     }
     @media ${({ theme }) => theme.device.mobile} {
       font-size: 1.5rem;
       padding-top: 1rem;
-      margin-bottom:0;
+      margin-bottom: 0;
     }
     @media ${({ theme }) => theme.device.tablet} {
       font-size: 2rem;
-      margin-bottom:0;
-      margin-top:0.8rem;
+      margin-bottom: 0;
+      margin-top: 0.8rem;
     }
     @media ${({ theme }) => theme.device.laptop} {
       font-size: 2.5rem;
@@ -66,52 +67,51 @@ const Content = styled.div`
 `;
 
 const Section = styled.div`
-  position: relative;
+  position: absolute;
   p {
     color: var(--grey-400);
     font-size: 1.1rem;
   }
 
   @media ${({ theme }) => theme.device.small} {
-    postion: absolute;
-    bottom:6rem;
+    bottom: 6rem;
     width: 100%;
     p {
-    font-size: 0.7rem;
-    padding:0 0.5rem;
-    margin-bottom:0;
-    line-height:1.2;
-    text-align:center;
-  }
-  }
-  @media ${({ theme }) => theme.device.mobile} {
-    postion: absolute;
-    bottom:6rem;
-    width: 100%;
-    p {
-    font-size: 0.8rem;
-    margin-bottom:0;
-    line-height:1.2;
-    text-align:center;
-  }
-  }
-  @media ${({ theme }) => theme.device.tablet} {
-    postion: absolute;
-    bottom:20rem;
-    width: 50%;
-    right:-22rem;
-    p{
-    margin-bottom:0;
+      font-size: 0.7rem;
+      padding: 0 0.5rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      text-align: center;
     }
   }
-  @media ${({ theme }) => theme.device.laptop} {
-    postion: absolute;
-    bottom:27rem;
+  @media ${({ theme }) => theme.device.mobile} {
+    bottom: 6rem;
+    width: 100%;
+    p {
+      font-size: 0.8rem;
+      margin-bottom: 0;
+      line-height: 1.2;
+      text-align: center;
+    }
+  }
+  @media ${({ theme }) => theme.device.tablet} {
+    bottom: 9rem;
+    width: 50%;
+    right: 0;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  /* @media ${({ theme }) => theme.device.laptop} {
+    bottom:29rem;
     width: 50%;
     right:-30rem;
-  }
-  @media ${({ theme }) => theme.device.desktop} {
-    postion: absolute;
+    border:1px solid red;
+    p{
+      color:red
+    }
+  } */
+  /* @media ${({ theme }) => theme.device.desktop} {
     bottom:30rem;
     width: 50%;
     right:-43rem;
@@ -119,14 +119,16 @@ const Section = styled.div`
       font-size:1.3rem;
       line-height:1.5;
     }
-  }
+  } */
 `;
 
 const Footer = styled.footer`
-  margin-top: 2rem;
+  position: absolute;
   text-align: center;
+  width:100%;
   h4 {
     margin-bottom: 0.8rem;
+    color:var(--grey-400);
   }
   form {
     display: flex;
@@ -148,11 +150,11 @@ const Footer = styled.footer`
   @media ${({ theme }) => theme.device.small} {
     width: 100%;
     margin: -4rem auto;
-    padding-bottom:0.9rem;
+    padding-bottom: 0.9rem;
     h4 {
-    font-size:0.9rem;
-    padding:0 0.5rem;
-  }
+      font-size: 0.9rem;
+      padding: 0 0.5rem;
+    }
     form {
       width: 85%;
       margin: 0.7rem auto;
@@ -166,10 +168,10 @@ const Footer = styled.footer`
   @media ${({ theme }) => theme.device.mobile} {
     width: 100%;
     margin: -4rem auto;
-    padding-bottom:0.9rem;
+    padding-bottom: 0.9rem;
     h4 {
-    font-size:0.9rem;
-  }
+      font-size: 0.9rem;
+    }
     form {
       width: 85%;
       margin: 0.7rem auto;
@@ -181,12 +183,11 @@ const Footer = styled.footer`
     }
   }
   @media ${({ theme }) => theme.device.tablet} {
-    /* width: 100%; */
-    margin: -12rem auto;
+    bottom:0;
     h4 {
-    font-size:1.2rem;
-    padding-top:0.8rem;
-  }
+      font-size: 1.2rem;
+      padding-top: 0.8rem;
+    }
     form {
       width: 70%;
       margin: 1rem auto;
@@ -200,7 +201,7 @@ const Footer = styled.footer`
   @media ${({ theme }) => theme.device.laptop} {
     width: 100%;
     margin: -10rem auto;
-    padding-bottom:1rem;
+    padding-bottom: 1rem;
     form {
       width: 70%;
       margin: 0 auto;
@@ -212,7 +213,7 @@ const Footer = styled.footer`
   @media ${({ theme }) => theme.device.desktop} {
     width: 100%;
     margin: -11rem auto;
-    padding:0.8rem 0;
+    padding: 0.8rem 0;
     form {
       width: 50%;
       margin: 0 auto;

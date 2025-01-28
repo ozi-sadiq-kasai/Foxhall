@@ -12,24 +12,24 @@ const Navbar = () => {
           <li>Visit Us</li>
         </ul>
       </Container>
-      <Section>
-        <img src={whiteWine} alt='whitewine and grapes' />
-      </Section>
+      <Image>
+        <img src={whiteWine} alt='whitewine and grapes' className='img' />
+      </Image>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.nav`
-  position: relative;
-  
+position:relative;
 `;
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap:10px;
   padding: 1rem 0.8rem;
-  position: relative;
+  position: absolute;
   z-index: 1000;
+  width:100%;
 
   h1 {
     margin-bottom: 0;
@@ -69,18 +69,8 @@ const Container = styled.div`
     transition: var(--transition);
   }
 `;
-const Section = styled.div`
-  position: absolute;
+const Image = styled.div`
+  position: relative;
   top: 0;
-  width: 100%;
-
-  z-index: 1; 
-  overflow: hidden;
-  img {
-    display: block;
-    width: 100%;
-    margin: auto;
-    height: auto;
-  }
 `;
 export default Navbar;

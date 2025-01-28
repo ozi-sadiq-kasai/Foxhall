@@ -132,7 +132,7 @@ const Content = styled.ul`
   @media ${({ theme }) => theme.device.tablet} {
     padding: 0;
     li > p,span {
-      line-height:0.9rem
+      line-height:0.7rem
     }
   }
   @media ${({ theme }) => theme.device.laptop} {
