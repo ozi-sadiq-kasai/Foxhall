@@ -3,6 +3,7 @@ import Wine1 from './assets/winery.png';
 import Wine2 from './assets/maseto.png';
 import Wine3 from './assets/fratelli.png';
 import Wine4 from './assets/chanti.png';
+import { Element } from 'react-scroll';
 
 const Shop = () => {
   const wines = [
@@ -42,16 +43,18 @@ const Shop = () => {
   const Wine = wines.map((wine) => (
     <li key={wine.id}>
       <img src={wine.src} alt={wine.alt} className='img' />
-        <p>{wine.name}</p>
-        <p>${wine.price}</p>
-        <span>{wine.region}</span>
+      <p>{wine.name}</p>
+      <p>${wine.price}</p>
+      <span>{wine.region}</span>
     </li>
   ));
   return (
-    <Wrapper>
-      <h2>Shop</h2>
-      <Content>{Wine}</Content>
-    </Wrapper>
+    <Element name='shop'>
+      <Wrapper>
+        <h2>Shop</h2>
+        <Content>{Wine}</Content>
+      </Wrapper>
+    </Element>
   );
 };
 
@@ -84,7 +87,7 @@ const Content = styled.ul`
   justify-content: space-evenly;
   gap: 1rem;
   padding: 0 1.5rem 1.5rem 1.5rem;
- 
+
   li {
     display: flex;
     flex-direction: column;
@@ -110,11 +113,12 @@ const Content = styled.ul`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    li > p,span {
-      line-height:0.9rem
+    li > p,
+    span {
+      line-height: 0.9rem;
     }
-    li{
-      width:11rem;
+    li {
+      width: 11rem;
     }
   }
   @media ${({ theme }) => theme.device.mobile} {
@@ -122,29 +126,33 @@ const Content = styled.ul`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    li > p,span {
-      line-height:0.9rem
+    li > p,
+    span {
+      line-height: 0.9rem;
     }
-    li{
-      width:12rem;
+    li {
+      width: 12rem;
     }
   }
   @media ${({ theme }) => theme.device.tablet} {
     padding: 0;
-    li > p,span {
-      line-height:0.7rem
+    li > p,
+    span {
+      line-height: 0.7rem;
     }
   }
   @media ${({ theme }) => theme.device.laptop} {
     /* padding: 0; */
-    li > p,span {
-      line-height:0.9rem
+    li > p,
+    span {
+      line-height: 0.9rem;
     }
   }
   @media ${({ theme }) => theme.device.desktop} {
     /* padding: 0; */
-    li > p,span {
-      line-height:0.9rem
+    li > p,
+    span {
+      line-height: 0.9rem;
     }
   }
 `;

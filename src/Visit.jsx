@@ -1,9 +1,11 @@
 import vineyard from './assets/vineyard.jpg';
 import styled from 'styled-components';
 import { motion } from 'motion/react';
+import { Element } from 'react-scroll';
 
 const Visit = () => {
   return (
+    <Element name='visit'>
     <Wrapper>
       <h2>Visit Us</h2>
       <Content>
@@ -32,6 +34,7 @@ const Visit = () => {
         </Footer>
       </Content>
     </Wrapper>
+    </Element>
   );
 };
 

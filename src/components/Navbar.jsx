@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import whiteWine from '../assets/whiteWine.jpg';
+import { Link} from 'react-scroll';
 
 const Navbar = () => {
   return (
@@ -7,9 +8,9 @@ const Navbar = () => {
       <Container>
         <h1>Foxhall</h1>
         <ul>
-          <li>Our Story</li>
-          <li>Shop</li>
-          <li>Visit Us</li>
+          <li><Link to='about' smooth={true} duration={500}>About</Link></li>
+          <li><Link to='shop' smooth={true} duration={500}>Shop</Link></li>
+          <li><Link to='visit' smooth={true} duration={500}>Visit</Link></li>
         </ul>
       </Container>
       <Image>
