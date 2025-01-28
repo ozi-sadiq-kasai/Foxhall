@@ -19,17 +19,18 @@ const AboutUs = () => {
 const Wrapper = styled.div`
   @media ${({ theme }) => theme.device.small} {
     z-index: 3;
-    margin-top: 25vh;
+    margin-top: 38vh;
   }
   @media ${({ theme }) => theme.device.mobile} {
     z-index: 3;
-    margin-top: 38vh;
+    margin-top: 40vh;
   }
   @media ${({ theme }) => theme.device.tablet} {
     margin-top: 75vh;
+ 
   }
   @media ${({ theme }) => theme.device.laptop} {
-    margin-top: 82vh;
+    margin-top: 58vh;
   }
   @media ${({ theme }) => theme.device.desktop} {
     margin-top: 85vh;
@@ -41,7 +42,7 @@ const Container = styled.div`
 
   h2 {
     text-align: center;
-    font-size: 1.5rem;
+    /* font-size: 2rem; */
     margin-bottom: 0;
   }
   p {
@@ -52,7 +53,7 @@ const Container = styled.div`
 
   @media ${({ theme }) => theme.device.small} {
     padding: 0;
-    padding-top: 0.4rem;
+    padding: 0.4rem 0;
     p {
       max-width: 95%;
       font-size: 1rem;
@@ -76,6 +77,9 @@ const Container = styled.div`
     h2 {
       font-size: 2rem;
     }
+  }
+  @media ${({ theme }) => theme.device.desktop} {
+    max-width: 95%;
   }
 `;
 

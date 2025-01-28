@@ -83,7 +83,7 @@ const Content = styled.ul`
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  padding: 0 1.5rem 0.8rem 1.5rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
  
   li {
     display: flex;
@@ -131,6 +131,18 @@ const Content = styled.ul`
   }
   @media ${({ theme }) => theme.device.tablet} {
     padding: 0;
+    li > p,span {
+      line-height:0.9rem
+    }
+  }
+  @media ${({ theme }) => theme.device.laptop} {
+    /* padding: 0; */
+    li > p,span {
+      line-height:0.9rem
+    }
+  }
+  @media ${({ theme }) => theme.device.desktop} {
+    /* padding: 0; */
     li > p,span {
       line-height:0.9rem
     }
