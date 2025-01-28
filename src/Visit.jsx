@@ -74,13 +74,13 @@ const Section = styled.div`
   }
 
   @media ${({ theme }) => theme.device.small} {
-    bottom: 6rem;
+    bottom: 5rem;
     width: 100%;
     p {
       font-size: 0.7rem;
       padding: 0 0.5rem;
       margin-bottom: 0;
-      line-height: 1.2;
+      line-height: 1;
       text-align: center;
     }
   }
@@ -102,24 +102,20 @@ const Section = styled.div`
       margin-bottom: 0;
     }
   }
-  /* @media ${({ theme }) => theme.device.laptop} {
-    bottom:29rem;
+  @media ${({ theme }) => theme.device.laptop} {
+    bottom:12rem;
     width: 50%;
-    right:-30rem;
-    border:1px solid red;
-    p{
-      color:red
-    }
-  } */
-  /* @media ${({ theme }) => theme.device.desktop} {
-    bottom:30rem;
+    right:1rem;
+  }
+  @media ${({ theme }) => theme.device.desktop} {
+    bottom:15rem;
     width: 50%;
-    right:-43rem;
+    right:1rem;
     p{
-      font-size:1.3rem;
+      font-size:1.5rem;
       line-height:1.5;
     }
-  } */
+  }
 `;
 
 const Footer = styled.footer`
@@ -149,11 +145,11 @@ const Footer = styled.footer`
 
   @media ${({ theme }) => theme.device.small} {
     width: 100%;
-    margin: -4rem auto;
-    padding-bottom: 0.9rem;
+    margin: -4.7rem auto;
     h4 {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       padding: 0 0.5rem;
+     margin-bottom:0;
     }
     form {
       width: 85%;
@@ -215,7 +211,7 @@ const Footer = styled.footer`
     margin: -11rem auto;
     padding: 0.8rem 0;
     form {
-      width: 50%;
+      width: 70%;
       margin: 0 auto;
       button {
         width: 30%;
