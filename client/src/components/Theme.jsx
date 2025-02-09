@@ -1,7 +1,8 @@
 import { ThemeProvider } from "styled-components";
 
 const size = {
-  mobile: '576px', // Extra Small Devices (Phones)
+  small:'425px',//Extra Small Devices (Phones)
+  mobile: '576px', //  Small Devices (Phones)
   tablet: '768px', // Small Devices (Tablets)
   laptop: '1024px', // Medium Devices (Tablets and Small Laptops)
   desktop: '1440px', // Large Devices (Desktops)
@@ -9,8 +10,9 @@ const size = {
 
 const theme = {
   device: {
-    mobile: `(max-width: ${size.mobile})`, // Extra Small Devices
-    tablet: `(min-width: ${parseInt(size.mobile) + 1}px) and (max-width: ${size.tablet})`, // Small Devices
+    small: `(max-width: ${size.small})`, // Extra Small Devices
+    mobile: `(min-width: ${parseInt(size.small) + 1}px) and (max-width: ${size.mobile})`, //Small Devices
+    tablet: `(min-width: ${parseInt(size.mobile) + 1}px) and (max-width: ${size.tablet})`, // Tablet Devices
     laptop: `(min-width: ${parseInt(size.tablet) + 1}px) and (max-width: ${size.laptop})`, // Medium Devices
     desktop: `(min-width: ${parseInt(size.laptop) + 1}px) and (max-width: ${size.desktop})`, // Large Devices
     desktopLarge: `(min-width: ${parseInt(size.desktop) + 1}px)`, // Extra Large Devices
